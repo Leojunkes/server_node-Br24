@@ -8,8 +8,15 @@ class UpdateContactsController {
         const updateContactsService = new UpdateContactsService();
         try {
             const { id } = request.params;
+            const {name, last_name, name1, last_name1} = request.body;
             const updateUSers = await updateContactsService.execute({
-                id
+                id,
+                
+                name,
+                last_name,
+                name1,
+                last_name1,
+
             })
 
             return response.json(updateUSers)

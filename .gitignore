@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+#detalhes aprendizado
+/Aprendizado.md
+
 # next.js
 /.next/
 /out/
