@@ -13,7 +13,7 @@ class DeleteContactsController {
             return response.json(deleteUSers)
         } catch (err) {
             return response.status(400).json({
-                err: err.message
+                errr: err.message
             })
         }
 

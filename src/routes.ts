@@ -2,9 +2,10 @@ import { Router } from 'express'
 import { CreateCompaniesController } from './controllers/CreateCompaniesController';
 import { CreateContactsController } from './controllers/CreateContactsController'
 import { DeleteContactsController } from './controllers/DeleteContactsController';
-import {UpdateContactsController} from './controllers/UpdateContactsController'
+import { UpdateContactsController } from './controllers/UpdateContactsController'
 import { ListCompanyController } from './controllers/ListCompanyController';
 import { ListContactsController } from './controllers/ListContactController';
+import { DeleteCompanyController } from './controllers/DeleteCompanyController';
 
 const router = Router();
 
@@ -14,6 +15,7 @@ const createContactsController = new CreateContactsController()
 const listCompanyController = new ListCompanyController()
 const listContactsController = new ListContactsController()
 const deleteContactsController = new DeleteContactsController()
+const deleteCompanyController = new DeleteCompanyController()
 const updateContactController = new UpdateContactsController()
 
 
@@ -26,7 +28,9 @@ router.get("/companies", listCompanyController.handle)
 router.get("/users", listContactsController.handle)
 
 router.delete("/users/:id", deleteContactsController.handle)
-router.put("/putUsers/:id", updateContactController.handle)  
+router.delete("/companies/:id",deleteCompanyController.handle)
+
+router.put("/putUsers/:id", updateContactController.handle)
 
 
 

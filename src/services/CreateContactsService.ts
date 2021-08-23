@@ -9,6 +9,7 @@ interface IContactsRequest {
     companiesId: string;
     name1: string;
     last_name1: string;
+    
 
 }
 class CreateContactsService {
