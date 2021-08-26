@@ -4,12 +4,13 @@ import { CreateCompaniesService } from '../services/CreateConpaniesService';
 class CreateCompaniesController {
     async handle(request: Request, response: Response) {
         try {
-            const { title } = request.body;
+            const { title, email } = request.body;
 
         const createCompaniesService = new CreateCompaniesService();
 
         const companies = await createCompaniesService.execute({
-            title
+            title,
+            email
         });
         return response.json(companies)
         } catch (err) {

@@ -8,14 +8,16 @@ class Companies {
     readonly id: string;
     @Column()
     title: string;
-    @OneToMany(()=>Contacts, contacts=>{ contacts.companies})
+    @Column()
+    email: string;
+    @OneToMany(() => Contacts, contacts => { contacts.companies })
     contacts: Contacts[]
     @CreateDateColumn()
     created_At: Date;
     @CreateDateColumn()
     update_At: Date;
 
-    
+
 
     constructor() {
         if (!this.id) {

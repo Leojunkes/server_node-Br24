@@ -31,6 +31,7 @@ router.delete("/users/:id", deleteContactsController.handle)
 router.delete("/companies/:id",deleteCompanyController.handle)
 
 router.put("/putUsers/:id", updateContactController.handle)
+router.put("/companies/:id")
 
 
 

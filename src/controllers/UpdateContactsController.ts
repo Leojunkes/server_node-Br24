@@ -8,7 +8,7 @@ class UpdateContactsController {
         const updateContactsService = new UpdateContactsService();
         try {
             const { id } = request.params;
-            const { name, last_name, name1, last_name1,companies } = request.body;
+            const { name, last_name, name1, last_name1} = request.body;
             const updateUSers = await updateContactsService.execute({
                 id,
                 name,

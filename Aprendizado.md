@@ -8,4 +8,6 @@
 
 - ```yarn typeorm migration:generate -n RelationsContactsCompanies```
 
-chave github -   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
+chave github -   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
+
+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
