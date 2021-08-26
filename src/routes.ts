@@ -6,7 +6,7 @@ import { UpdateContactsController } from './controllers/UpdateContactsController
 import { ListCompanyController } from './controllers/ListCompanyController';
 import { ListContactsController } from './controllers/ListContactController';
 import { DeleteCompanyController } from './controllers/DeleteCompanyController';
-
+import {UpdateCompaniesController} from './controllers/UpdateCompanyController'
 const router = Router();
 
 const createCompaniesController = new CreateCompaniesController()
@@ -17,6 +17,7 @@ const listContactsController = new ListContactsController()
 const deleteContactsController = new DeleteContactsController()
 const deleteCompanyController = new DeleteCompanyController()
 const updateContactController = new UpdateContactsController()
+const updatecompanyController=new UpdateCompaniesController()
 
 
 
@@ -31,7 +32,7 @@ router.delete("/users/:id", deleteContactsController.handle)
 router.delete("/companies/:id",deleteCompanyController.handle)
 
 router.put("/putUsers/:id", updateContactController.handle)
-router.put("/companies/:id")
+router.put("/putCompanies/:id",updatecompanyController.handle)
 
 
 

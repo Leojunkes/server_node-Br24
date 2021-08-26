@@ -2,7 +2,7 @@
 
 import { ContactsRepositories } from "../repositories/ContactsRepositories"
 import { getCustomRepository } from 'typeorm'
-import { Contacts } from "../entities/Contacts";
+
 
 
 interface IContactsRequest {
